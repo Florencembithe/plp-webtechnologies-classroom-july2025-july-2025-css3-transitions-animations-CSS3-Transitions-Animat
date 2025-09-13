@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio - CSS3 & JavaScript Integration</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Floating Shapes -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Interactive Portfolio</h1>
+        <p>CSS3 Animations & JavaScript Integration</p>
+        <button class="btn" onclick="showModal()">Show Modal</button>
+        <button class="btn" onclick="startLoading()">Start Loading</button>
+        <button class="btn" onclick="animateCards()">Animate Cards</button>
+    </header>
+
+    <div class="container">
+        <!-- Score Display -->
+        <div class="score-display" id="scoreDisplay">
+            Score: <span id="scoreValue">0</span>
+        </div>
+
+        <!-- Interactive Box -->
+        <div class="interactive-box" id="interactiveBox" onclick="handleBoxClick()">
+            Click me! 🎯
+        </div>
+
+        <!-- Flip Card -->
+        <div class="flip-card" id="flipCard" onclick="flipCard()">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <p>Click to Flip!</p>
+                </div>
+                <div class="flip-card-back">
+                    <p>You flipped me! 🎉</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Container -->
+        <div class="loading-container">
+            <div class="loading-spinner" id="loadingSpinner"></div>
+            <p id="loadingText">Click "Start Loading" to begin</p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid" id="cardsGrid">
+            <div class="card">
+                <h3>CSS3 Transitions</h3>
+                <p>Smooth animations on hover, click, and time-based triggers using CSS transitions and keyframes.</p>
+                <button class="btn" onclick="addPulse(this)">Add Pulse</button>
+            </div>
+            <div class="card">
+                <h3>JavaScript Functions</h3>
+                <p>Demonstrating scope, parameters, return values, and reusable logic with interactive elements.</p>
+                <button class="btn" onclick="calculateAndDisplay()">Calculate Random</button>
+            </div>
+            <div class="card">
+                <h3>CSS + JS Integration</h3>
+                <p>Combining CSS animations with JavaScript to create dynamic, responsive user experiences.</p>
+                <button class="btn" onclick="triggerSpecialEffect(this)">Special Effect</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" onclick="hideModal(event)">
+        <div class="modal-content">
+            <h2>Welcome to the Demo!</h2>
+            <p>This modal demonstrates CSS animations triggered by JavaScript. The modal slides in with a 3D rotation effect.</p>
+            <button class="btn" onclick="hideModal()">Close Modal</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
